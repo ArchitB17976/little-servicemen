@@ -1,0 +1,25 @@
+spring:
+    datasource: # Settings for SQL driver
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/microservice
+        username: root
+        password: Anthrax@22.
+    
+    jpa: #Settings for Hibernate to interact with SQL
+        hibernate.ddl-auto: update
+        generate-ddl: true
+        show-sql: true
+    application:
+        name: ORDER-SERVICE
+    
+server: # Server port to run the application
+    port: 8080
+
+eureka:
+   client:
+      registerWithEureka: true
+      fetchRegistry: true
+      serviceUrl:
+        defaultZone: "http://localhost:8761/eureka"
+        instance:
+            hostname: localhost
