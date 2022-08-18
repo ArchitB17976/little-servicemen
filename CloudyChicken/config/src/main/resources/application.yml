@@ -1,3 +1,3 @@
 server:
     port: 8099
-spring.cloud.config.server.git.uri: https://github.com/ArchitB17976/
+spring.cloud.config.server.git.uri: https://github.com/ArchitB17976/little-servicemen/tree/main/CloudyChicken
