@@ -1,26 +1,6 @@
-spring:
-    datasource: # Settings for SQL driver
-        driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/microservice
-        username: root
-        password: Anthrax@22.
-    
-    jpa: # Settings for Hibernate to interact with SQL DB
-        hibernate.ddl-auto: update
-        generate-ddl: true
-        show-sql: true
-    
-    application: # App name to identify on Eureka server
-        name: PAYMENT-SERVICE
-
 server: # Server port to run the application 
     port: 8081
 
-eureka: # Settings to connect to Eureka server
-   client:
-      registerWithEureka: true
-      fetchRegistry: true
-      serviceUrl:
-        defaultZone: "http://localhost:8761/eureka"
-        instance:
-            hostname: localhost
+spring:
+    application.name: PAYMENT-SERVICE
+    config.import: "config http://localhost:8099/"
